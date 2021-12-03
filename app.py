@@ -7,4 +7,6 @@ uploaded_files = st.file_uploader("Загрузите изображения с 
 for uploaded_file in uploaded_files:
     im = Image.open(uploaded_file)
     st.image(im)
-    im1 = im.save("img/1.jpg")
+    #im1 = im.save("img/1.jpg")
+    with open(os.path.join("img",uploaded_file.name),"wb") as f: 
+      f.write(uploaded_file.getbuffer()) 
