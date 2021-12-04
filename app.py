@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image 
 import PIL 
+import cv2
 
 uploaded_files = st.file_uploader("Загрузите изображения с других камер для того, чтобы узнать где есть мусор", 
        accept_multiple_files=True)
